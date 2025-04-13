@@ -2,18 +2,26 @@ package bankAccountV2;
 
 public class BankAccount {
 
-	//Set Variables For User Info and Balance Info
+	/**
+	 * Set Variables For User Info and Balance Info
+	 */
 	static String firstName = "Gryphon";
 	static String lastInitial = "M";
 	static int accountID = 00001;
 	static double balance = 0.0;
 	
-	//Summarizes Account Info For Label
+	/**
+	 * Summarizes Account Info For Label
+	 * @return Account Summary
+	 */
 	public static String accountSummary() {
 		return "User: " + firstName + ". " + lastInitial + " | Account ID#: " + accountID;
 	}
 	
-	//Method To Withdraw Money
+	/**
+	 * Method To Withdraw Money
+	 * @param textInput
+	 */
 	public static void withdraw(String textInput) {
 		try {
 			double withdrawAmount = Double.parseDouble(textInput);
@@ -23,7 +31,10 @@ public class BankAccount {
 		}
 	}
 	
-	//Method To Deposit Money
+	/**
+	 * Method To Deposit Money
+	 * @param textInput
+	 */
 	public static void deposit(String textInput) {
 		try {
 			double depositAmount = Double.parseDouble(textInput);
@@ -33,7 +44,10 @@ public class BankAccount {
 		}
 	}
 	
-	//Method Returns Balance Formatted To Two Decimal Places
+	/**
+	 * Method Returns Balance Formatted To Two Decimal Places
+	 * @return Formatted current balance
+	 */
     public static String getFormattedBalance() {
         return "Current Balance: $" + String.format("%.2f", balance);
     }
